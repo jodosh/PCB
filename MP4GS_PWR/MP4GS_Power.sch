@@ -229,6 +229,11 @@
 <rectangle x1="0.889" y1="-4.699" x2="1.651" y2="-2.921" layer="51"/>
 <rectangle x1="0.889" y1="-5.461" x2="1.651" y2="-4.699" layer="21"/>
 </package>
+<package name="1X02">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<pad name="PLFT" x="-3.5" y="7" drill="1.1" shape="long" rot="R90"/>
+<pad name="PRGT" x="0" y="7" drill="1.1" shape="long" rot="R90"/>
+</package>
 </packages>
 <symbols>
 <symbol name="L78">
@@ -253,6 +258,16 @@
 <pin name="2" x="2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot" rot="R180"/>
 <pin name="3" x="-5.08" y="0" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="4" x="2.54" y="0" visible="pad" length="short" direction="pas" function="dot" rot="R180"/>
+</symbol>
+<symbol name="PINHD2">
+<wire x1="-6.35" y1="-2.54" x2="1.27" y2="-2.54" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.27" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="5.08" x2="-6.35" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="5.08" x2="-6.35" y2="-2.54" width="0.4064" layer="94"/>
+<text x="-6.35" y="5.715" size="1.778" layer="95">&gt;NAME</text>
+<text x="-6.35" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="2" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -297,6 +312,23 @@
 <connect gate="A" pin="2" pad="2"/>
 <connect gate="A" pin="3" pad="3"/>
 <connect gate="A" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PINHD-1X2" prefix="JP" uservalue="yes">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="PINHD2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="1X02">
+<connects>
+<connect gate="G$1" pin="1" pad="PLFT"/>
+<connect gate="G$1" pin="2" pad="PRGT"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -5238,6 +5270,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="LED1" library="led" deviceset="LED" device="5MM"/>
 <part name="R1" library="rcl" deviceset="R-EU_" device="0207/10"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
+<part name="JP3" library="Haddock" deviceset="PINHD-1X2" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5255,6 +5288,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <instance part="LED1" gate="G$1" x="66.04" y="147.32"/>
 <instance part="R1" gate="G$1" x="66.04" y="129.54" rot="R90"/>
 <instance part="GND4" gate="1" x="66.04" y="111.76"/>
+<instance part="JP3" gate="G$1" x="127" y="182.88"/>
 </instances>
 <busses>
 </busses>
@@ -5287,6 +5321,9 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinref part="JP2" gate="A" pin="4"/>
 <wire x1="101.6" y1="175.26" x2="109.22" y2="175.26" width="0.1524" layer="91"/>
 <junction x="109.22" y="175.26"/>
+<wire x1="127" y1="182.88" x2="132.08" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="182.88" x2="132.08" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="175.26" x2="109.22" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
@@ -5315,6 +5352,10 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinref part="LED1" gate="G$1" pin="A"/>
 <wire x1="66.04" y1="160.02" x2="66.04" y2="149.86" width="0.1524" layer="91"/>
 <junction x="66.04" y="160.02"/>
+<pinref part="JP3" gate="G$1" pin="1"/>
+<wire x1="124.46" y1="185.42" x2="88.9" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="185.42" x2="88.9" y2="175.26" width="0.1524" layer="91"/>
+<junction x="88.9" y="175.26"/>
 </segment>
 </net>
 <net name="N$3" class="0">
