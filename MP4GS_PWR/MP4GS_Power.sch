@@ -5269,16 +5269,24 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </segment>
 <segment>
 <pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="30.48" y1="175.26" x2="30.48" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="175.26" x2="30.48" y2="177.8" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="A" pin="4"/>
+<wire x1="30.48" y1="177.8" x2="30.48" y2="190.5" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="175.26" x2="30.48" y2="175.26" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="A" pin="2"/>
+<wire x1="22.86" y1="177.8" x2="30.48" y2="177.8" width="0.1524" layer="91"/>
+<junction x="30.48" y="177.8"/>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
 <wire x1="88.9" y1="144.78" x2="109.22" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="144.78" x2="109.22" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="144.78" x2="109.22" y2="175.26" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="A" pin="2"/>
+<wire x1="109.22" y1="175.26" x2="109.22" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="177.8" x2="109.22" y2="177.8" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="A" pin="4"/>
+<wire x1="101.6" y1="175.26" x2="109.22" y2="175.26" width="0.1524" layer="91"/>
+<junction x="109.22" y="175.26"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
